@@ -71,6 +71,7 @@ task.innerHTML = '<h2>hola</h>'
 
 form.addEventListener("submit", function(e) {
     e.preventDefault()
+    console.log(e)
     if (inputTask.value.trim() != "") {
         let newTask = document.createElement("div")
 
@@ -91,6 +92,16 @@ form.addEventListener("submit", function(e) {
 
 
         taskContainer.appendChild(newTask)
+
+        inputTask.value = ""
     }
 })
 
+
+// Eliminar task
+taskContainer.addEventListener("click", function(e) {
+    console.log(e.target.classList)
+    if (e.target.classList.contains("deleteTaskButton") ) {
+        e.target.parentElement.remove()
+    }
+})
