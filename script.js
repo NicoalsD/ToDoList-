@@ -55,7 +55,7 @@
 //     }
 // })
 
-let inputTask = document.querySelector("#inputTask").value
+let inputTask = document.querySelector("#inputTask")
 
 let addTaskButton = document.querySelector("#addTaskButton")
 
@@ -71,27 +71,26 @@ task.innerHTML = '<h2>hola</h>'
 
 form.addEventListener("submit", function(e) {
     e.preventDefault()
-    if (inputTask.trim() != "") {
-        newTask = document.createElement("div")
+    if (inputTask.value.trim() != "") {
+        let newTask = document.createElement("div")
 
-        newTaskTittle = document.createElement("h2")
-        newTaskTittle.textContent = inputTask
+        let newTaskTittle = document.createElement("h2")
+        newTaskTittle.textContent = inputTask.value
         newTask.appendChild(newTaskTittle)
 
-        newTaskCheckbox = document.createElement("input")
+        let newTaskCheckbox = document.createElement("input")
         newTaskCheckbox.setAttribute("type", "checkbox")
         newTask.appendChild(newTaskCheckbox)
 
-        newTaskDelete = document.createElement("input")
+        let newTaskDelete = document.createElement("input")
         newTaskDelete.setAttribute("type", "button")
+        newTaskDelete.setAttribute("class", "deleteTaskButton")
         newTaskDelete.setAttribute("value", "Delete")
+
         newTask.appendChild(newTaskDelete)
 
-        
+
         taskContainer.appendChild(newTask)
     }
 })
 
-
-
-console.log(inputTask)
