@@ -69,18 +69,20 @@ let task = document.createElement("div")
 task.innerHTML = '<h2>hola</h>'
 
 
+let newTaskTittle = document.createElement("h2")
+
 form.addEventListener("submit", function(e) {
     e.preventDefault()
     console.log(e)
     if (inputTask.value.trim() != "") {
         let newTask = document.createElement("div")
-
-        let newTaskTittle = document.createElement("h2")
         newTaskTittle.textContent = inputTask.value
+        newTaskTittle.setAttribute("class", "taskTittle")
         newTask.appendChild(newTaskTittle)
 
         let newTaskCheckbox = document.createElement("input")
         newTaskCheckbox.setAttribute("type", "checkbox")
+        newTaskCheckbox.setAttribute("class", "checkTaskButton")
         newTask.appendChild(newTaskCheckbox)
 
         let newTaskDelete = document.createElement("input")
@@ -98,10 +100,14 @@ form.addEventListener("submit", function(e) {
 })
 
 
-// Eliminar task
+// Eliminar task y marcar completada
 taskContainer.addEventListener("click", function(e) {
     console.log(e.target.classList)
     if (e.target.classList.contains("deleteTaskButton") ) {
         e.target.parentElement.remove()
+    } 
+    
+    else if (e.target.classList.contains("checkTaskButton")) {
+        newTaskTittle.classList.toggle("active")
     }
 })
