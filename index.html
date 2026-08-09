@@ -10,18 +10,23 @@
     <h1>To Do List</h1>
     <h2>Simple Web App to list your task.</h2>
 
-    <form id="form-add-task">
-        <input type="text" id="inputTask" placeholder="Type the tittle of your task" requerid>
-        <button id="addTaskButton">Add task</button>
+    <form id="add-task-form">
+        <label>
+            <span>Task input</span>
+            <input type="text" id="input-task" placeholder="Type the title of your task" required>
+        </label>
+        <button id="add-task-button">Add task</button>
     </form>
 
-    <div id="task-list-container">
-        <!-- <div id="task">
-            <h2>Titulo de la task</h2>
-            <input type="checkbox">
-            <input type="button" value="Delete">
-        </div> -->
-    </div>
+    <ul id="task-list-container">
+        <!-- <li class="task">
+            <label>
+                <input class="check-task" type="checkbox">
+                <span class="task-title">Task title</span>
+            </label>
+            <button class="delete-task-button">Delete task</button>
+        </li> -->
+    </ul>   
 </body>
 <script src="script.js"></script>
 </html>
