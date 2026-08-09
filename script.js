@@ -77,7 +77,10 @@ form.addEventListener("submit", function(e) {
         
 
         newTaskTittle.textContent = inputTask.value
-        newTaskTittle.setAttribute("class", "taskTittle")
+        // newTaskTittle.setAttribute("class", "taskTittle")
+
+        newTaskTittle.classList.add("taskTittle")
+
         newTask.appendChild(newTaskTittle)
 
         let newTaskCheckbox = document.createElement("input")
