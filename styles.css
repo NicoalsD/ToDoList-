@@ -1,0 +1,6 @@
+.taskTittle {
+    text-decoration: none;
+}
+.taskTittle.active {
+    text-decoration: line-through;
+}
