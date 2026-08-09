@@ -65,17 +65,17 @@ let form = document.querySelector("#form-add-task")
 
 let taskContainer = document.querySelector("#task-list-container")
 
-let task = document.createElement("div")
-task.innerHTML = '<h2>hola</h>'
 
-
-let newTaskTittle = document.createElement("h2")
 
 form.addEventListener("submit", function(e) {
     e.preventDefault()
     console.log(e)
     if (inputTask.value.trim() != "") {
+
+        let newTaskTittle = document.createElement("h2")
         let newTask = document.createElement("div")
+        
+
         newTaskTittle.textContent = inputTask.value
         newTaskTittle.setAttribute("class", "taskTittle")
         newTask.appendChild(newTaskTittle)
@@ -108,6 +108,6 @@ taskContainer.addEventListener("click", function(e) {
     } 
     
     else if (e.target.classList.contains("checkTaskButton")) {
-        newTaskTittle.classList.toggle("active")
+        e.target.parentElement.querySelector(".taskTittle").classList.toggle("active")
     }
 })
