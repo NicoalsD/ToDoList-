@@ -76,6 +76,10 @@ form.addEventListener("submit", function(e) {
         let newTask = document.createElement("div")
         newTask.classList.add("task")
         
+        let newTaskCheckbox = document.createElement("input")
+        newTaskCheckbox.setAttribute("type", "checkbox")
+        newTaskCheckbox.setAttribute("class", "checkTaskButton")
+        newTask.appendChild(newTaskCheckbox)
 
         newTaskTittle.textContent = inputTask.value
         // newTaskTittle.setAttribute("class", "taskTittle")
@@ -84,10 +88,6 @@ form.addEventListener("submit", function(e) {
 
         newTask.appendChild(newTaskTittle)
 
-        let newTaskCheckbox = document.createElement("input")
-        newTaskCheckbox.setAttribute("type", "checkbox")
-        newTaskCheckbox.setAttribute("class", "checkTaskButton")
-        newTask.appendChild(newTaskCheckbox)
 
         let newTaskDelete = document.createElement("button")
         // newTaskDelete.setAttribute("type", "button")
