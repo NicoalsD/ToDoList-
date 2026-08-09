@@ -1,10 +1,9 @@
-.taskTittle {
-    text-decoration: none;
-}
-.taskTittle.active {
+
+
+.task-title.active {
+    color:#ff0606;
     text-decoration: line-through;
     text-decoration-color: #ff0000;
-    text-decoration-style: solid 12px;
     text-decoration-thickness: 5px;
 }
 
@@ -12,68 +11,24 @@ body {
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
     background-color: #131313;
-}
 
-body {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#form-add-task, #task-list-container {
+
+#add-task-form, #task-list-container {
     background-color: #2b2b2b;
     margin: 12px;
     padding: 12px;
     width: 50vw;
 }
 
-#form-add-task {
-    min-height: 50px;
-}
-
-#addTaskButton {
-    height: 100%;
-}
-
-#inputTask, #addTaskButton {
-    font-size: larger;
-    padding: 12px;
-}
-
-#inputTask {
-    height: 100%;
-    border: none;
-}
-
 #task-list-container {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: start;
-    min-height: 50vh;
+    list-style: none;
 }
 
-
-button {
-    background-color: #1561f0;
-    color: white;
-    font-weight: bold;
-    padding: 6px;
-    border-style: none;
-}
-
-.task {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-    background-color: #131313;
-    padding: 3px;
-    margin-top: 12px;
-}
-
-.taskTittle {
-    padding: 3px;
-    margin: 6px;
-    min-width: 33vw;
-    /* border: 2px solid #2b2b2b; */
+.task label {
+    margin: 100px;
 }
