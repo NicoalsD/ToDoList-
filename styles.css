@@ -1,9 +1,9 @@
 
 
 .task-title.active {
-    color:#ff0606;
+    color:#6e6b6b;
     text-decoration: line-through;
-    text-decoration-color: #ff0000;
+    text-decoration-color: #888484;
     text-decoration-thickness: 5px;
 }
 
@@ -17,18 +17,48 @@ body {
     align-items: center;
 }
 
+#add-task-form {
+    display: flex;
+}
+button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 12px;
+}
+
+#input-task {
+    padding: 12px;
+    border: none;
+}
 
 #add-task-form, #task-list-container {
     background-color: #2b2b2b;
     margin: 12px;
     padding: 12px;
-    width: 50vw;
+    width: 30vw;
 }
 
 #task-list-container {
     list-style: none;
+    min-height: 50vh;
+}
+
+.task {
+    margin: 12px;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    justify-content: space-between;
+    background-color: #131313;
 }
 
 .task label {
-    margin: 100px;
+    display: flex;
+    gap: 24px;
 }
+
+.task-title {
+    font-size: larger;
+}
+

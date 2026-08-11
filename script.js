@@ -1,7 +1,6 @@
 // Add task form elements
 let addTaskForm = document.querySelector("#add-task-form")
 let inputTask = document.querySelector("#input-task")
-let addTaskButton = document.querySelector("#addTaskButton")
 
 // Task container 
 let taskListContainer = document.querySelector("#task-list-container")
@@ -43,7 +42,7 @@ addTaskForm.addEventListener("submit", function(e) {
 
 
 // Check Task
-taskListContainer.addEventListener("click", function(e){
+taskListContainer.addEventListener("change", function(e){
     if (e.target.classList.contains("check-task")) {
         e.target.parentElement.querySelector(".task-title").classList.toggle("active")
     }
